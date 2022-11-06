@@ -149,9 +149,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "gtk-ui"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a36892174072fac76f9dc986e315d512a3fad7cbaffc3dd7fc913a4b133b845c"
+dependencies = [
+ "unescape",
+]
+
+[[package]]
 name = "gtkui-language-server"
 version = "0.1.0"
 dependencies = [
+ "dashmap",
+ "gtk-ui",
+ "ropey",
  "tokio",
  "tower-lsp",
 ]
@@ -378,6 +390,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "ropey"
+version = "1.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbd22239fafefc42138ca5da064f3c17726a80d2379d817a3521240e78dd0064"
+dependencies = [
+ "smallvec",
+ "str_indices",
+]
+
+[[package]]
 name = "ryu"
 version = "1.0.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -464,6 +486,12 @@ dependencies = [
  "libc",
  "winapi",
 ]
+
+[[package]]
+name = "str_indices"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9d9199fa80c817e074620be84374a520062ebac833f358d74b37060ce4a0f2c0"
 
 [[package]]
 name = "syn"
@@ -615,6 +643,12 @@ checksum = "24eb03ba0eab1fd845050058ce5e616558e8f8d8fca633e6b163fe25c797213a"
 dependencies = [
  "once_cell",
 ]
+
+[[package]]
+name = "unescape"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ccb97dac3243214f8d8507998906ca3e2e0b900bf9bf4870477f125b82e68f6e"
 
 [[package]]
 name = "unicode-bidi"
